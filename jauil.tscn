@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://c6hx0lo4k3sf1"]
+
+[node name="JAUIL" type="Node2D" unique_id=369001973]
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1035798852]
+offset_left = -49.0
+offset_top = 186.80592
+offset_right = 73.0
+offset_bottom = 327.8059
+color = Color(0, 0.1764706, 0.13725491, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1066091356]
+offset_left = -65.0
+offset_top = 312.8059
+offset_right = 86.0
+offset_bottom = 334.8059
+color = Color(0, 0.3254902, 0.36078432, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=2059921012]
+offset_left = -65.0
+offset_top = 180.80592
+offset_right = 87.0
+offset_bottom = 201.80592
+color = Color(0, 0.3254902, 0.36078432, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="." unique_id=904238269]
+offset_left = -37.0
+offset_top = 168.80592
+offset_right = 60.0
+offset_bottom = 180.80592
+color = Color(0.1887264, 0.19833672, 0.18078557, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="." unique_id=1819768778]
+offset_left = -1.0
+offset_top = 114.80592
+offset_right = 20.0
+offset_bottom = 180.80592
+color = Color(0.1887264, 0.19833672, 0.18078557, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="." unique_id=1633873842]
+offset_left = 7.0
+offset_top = 51.805923
+offset_right = 28.0
+offset_bottom = 117.80592
+rotation = 0.097872116
+color = Color(0.1887264, 0.19833672, 0.18078557, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="." unique_id=667752013]
+offset_left = -12.0
+offset_top = -4.1940765
+offset_right = 9.0
+offset_bottom = 61.805923
+rotation = -0.2308999
+color = Color(0.1887264, 0.19833672, 0.18078557, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=123508443]
+offset_left = 60.0
+offset_top = 188.80592
+offset_right = 73.0
+offset_bottom = 321.8059
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=21499716]
+offset_left = -50.0
+offset_top = 189.80592
+offset_right = -37.0
+offset_bottom = 322.8059
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=2046873512]
+offset_left = -17.0
+offset_top = 184.80592
+offset_right = -4.0
+offset_bottom = 327.8059
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="." unique_id=439139732]
+offset_left = 22.0
+offset_top = 184.80592
+offset_right = 35.0
+offset_bottom = 326.8059
+color = Color(0, 0.4, 0.49019608, 1)

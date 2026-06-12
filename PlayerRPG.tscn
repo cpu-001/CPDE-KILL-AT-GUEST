@@ -1,0 +1,435 @@
+[gd_scene format=3 uid="uid://c2h8pohjk5c4q"]
+
+[ext_resource type="Script" uid="uid://dy5jquxukryb4" path="res://Players/player_rpg.gd" id="1_fxkrs"]
+[ext_resource type="Texture2D" uid="uid://dosecun1cs05y" path="res://Captura de pantalla 2026-06-08 175326.png" id="2_k3vy6"]
+[ext_resource type="Script" uid="uid://bfmgfdqjl6jwe" path="res://Players/camera_2d.gd" id="2_p2aj7"]
+[ext_resource type="Script" uid="uid://jcquin7t5o2y" path="res://Players/warnig_ui.gd" id="2_t53kv"]
+[ext_resource type="PackedScene" uid="uid://dfo1hqgkmtp82" path="res://options_menu.tscn" id="4_v5o8s"]
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="6_d0m2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn4ns"]
+size = Vector2(44, 42)
+
+[sub_resource type="Animation" id="Animation_p2aj7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body/ColorRect5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-39, -33)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -34)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("body/ColorRect5:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.785, 1.785)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("body/ColorRect:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.785, 1.785)]
+}
+
+[sub_resource type="Animation" id="Animation_v5o8s"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body/ColorRect5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.41),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-39, -33), Vector2(-39, -40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.41),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-36, -34), Vector2(-36, -41)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("body/ColorRect5:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.41),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.785, 1.785), Vector2(1.785, 1.9449999)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("body/ColorRect:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.41),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.785, 1.785), Vector2(1.785, 1.9449999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cliwv"]
+_data = {
+&"RESET": SubResource("Animation_p2aj7"),
+&"idle": SubResource("Animation_v5o8s")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5o8s"]
+radius = 47.09956
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2q8qj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgnew"]
+bg_color = Color(0.10597328, 0.7465965, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y4bea"]
+font = ExtResource("6_d0m2n")
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_2q8qj"]
+font = ExtResource("6_d0m2n")
+font_size = 60
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1299275331 groups=["player"]]
+scale = Vector2(1.49, 1.49)
+script = ExtResource("1_fxkrs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309407503]
+position = Vector2(0, -1)
+scale = Vector2(1.785, 1.785)
+shape = SubResource("RectangleShape2D_dn4ns")
+
+[node name="body" type="Node2D" parent="." unique_id=229340747]
+
+[node name="ColorRect5" type="ColorRect" parent="body" unique_id=990012528]
+offset_left = -39.0
+offset_top = -33.0
+offset_right = 2.6806717
+offset_bottom = 6.542801
+scale = Vector2(1.785, 1.785)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="body" unique_id=409149705]
+offset_left = -36.0
+offset_top = -34.0
+offset_right = 4.0
+offset_bottom = 6.0
+scale = Vector2(1.785, 1.785)
+
+[node name="ColorRect2" type="ColorRect" parent="body" unique_id=1287081215]
+offset_left = -36.0
+offset_top = 8.0
+offset_right = 36.0
+offset_bottom = 37.583893
+color = Color(0.087793924, 0.36238927, 0.9999998, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="body" unique_id=1357519530]
+offset_left = 24.0
+offset_top = 9.0
+offset_right = 30.0
+offset_bottom = 38.0
+color = Color(0.09882622, 0.10042889, 0.10003365, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="body" unique_id=147261084]
+offset_left = -36.912754
+offset_top = 8.0
+offset_right = 36.912754
+offset_bottom = 14.0
+color = Color(0.09882622, 0.10042889, 0.10003365, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="body" unique_id=1560761728]
+offset_left = -4.6979866
+offset_top = 16.107382
+offset_right = 14.973154
+offset_bottom = 32.214767
+color = Color(0.68779147, 0.55987304, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="body" unique_id=213633276]
+offset_left = -5.0
+offset_top = 16.0
+offset_right = 13.0
+offset_bottom = 30.0
+color = Color(0.8849019, 0.725786, 3.85046e-06, 1)
+
+[node name="hand" type="Node2D" parent="body" unique_id=1846593107]
+visible = false
+position = Vector2(53, 5)
+
+[node name="ColorRect7" type="ColorRect" parent="body/hand" unique_id=1873723359]
+offset_left = -10.999996
+offset_top = -18.0
+offset_right = 10.84874
+offset_bottom = -10.156862
+scale = Vector2(1.785, 1.785)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="body/hand" unique_id=721583841]
+offset_left = -14.999996
+offset_top = -10.0
+offset_right = -0.43416977
+offset_bottom = 4.005602
+scale = Vector2(1.785, 1.785)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="body/hand" unique_id=628429727]
+offset_left = -9.999996
+offset_top = -13.0
+offset_right = 4.0056076
+offset_bottom = -0.11484909
+scale = Vector2(1.785, 1.785)
+
+[node name="ColorRect4" type="ColorRect" parent="body/hand" unique_id=1176229678]
+offset_left = -11.999996
+offset_top = -19.0
+offset_right = 9.288517
+offset_bottom = -11.717089
+scale = Vector2(1.785, 1.785)
+color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="body/hand" unique_id=1658896615]
+offset_left = -13.0
+offset_top = -11.0
+offset_right = 1.0056
+offset_bottom = 2.4453754
+scale = Vector2(1.785, 1.785)
+
+[node name="Marker2D" type="Marker2D" parent="body/hand" unique_id=828822147]
+position = Vector2(27.000004, -12)
+
+[node name="Customs" type="Node2D" parent="." unique_id=1991427113]
+scale = Vector2(4.71, 4.71)
+
+[node name="Cara02" type="Node2D" parent="Customs" unique_id=1167791746]
+visible = false
+position = Vector2(0, -5.095541)
+
+[node name="CapturaDePantalla20260608175326" type="Sprite2D" parent="Customs/Cara02" unique_id=2030566223]
+self_modulate = Color(0.72464263, 0.7246426, 0.7246426, 1)
+position = Vector2(4.5597687, 3.1006422)
+scale = Vector2(0.033523303, 0.022216614)
+texture = ExtResource("2_k3vy6")
+hframes = 2
+
+[node name="Gorra2" type="Node2D" parent="Customs" unique_id=1151243055]
+visible = false
+position = Vector2(0, -0.9974494)
+
+[node name="ColorRect" type="ColorRect" parent="Customs/Gorra2" unique_id=1886208744]
+offset_left = -8.407074
+offset_top = -8.7120075
+offset_right = 8.26458
+offset_bottom = -2.55404
+color = Color(0.08627451, 0.36078432, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Customs/Gorra2" unique_id=192162712]
+offset_left = -7.8371024
+offset_top = -4.609641
+offset_right = 11.409395
+offset_bottom = -2.2741852
+color = Color(0.09803922, 0.101960786, 0.101960786, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Customs/Gorra2" unique_id=1180045191]
+offset_left = 4.987247
+offset_top = -8.28453
+offset_right = 8.59659
+offset_bottom = -5.719659
+color = Color(0.8862745, 0.7254902, 0, 1)
+
+[node name="Lentes03" type="Node2D" parent="Customs" unique_id=2064639594]
+visible = false
+position = Vector2(0.14249277, -0.4274783)
+
+[node name="ColorRect2" type="ColorRect" parent="Customs/Lentes03" unique_id=1676757769]
+offset_left = 0.5699711
+offset_top = -4.925975
+offset_right = 7.2671313
+offset_bottom = 0.9162288
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Customs/Lentes03" unique_id=1834905777]
+offset_left = 1.7099133
+offset_top = -0.5086993
+offset_right = 4.469998
+offset_bottom = 0.20376456
+
+[node name="ColorRect3" type="ColorRect" parent="Customs/Lentes03" unique_id=1490824115]
+offset_left = 0.4274783
+offset_top = -4.925975
+offset_right = 9.119537
+offset_bottom = -2.3782043
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Customs/Lentes03" unique_id=1303970897]
+offset_left = -8.1220875
+offset_top = -4.925975
+offset_right = 0.4274788
+offset_bottom = -2.3782043
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=417664817]
+position = Vector2(189.12387, -116.012085)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.5
+rotation_smoothing_enabled = true
+script = ExtResource("2_p2aj7")
+
+[node name="WarnigUI" type="CanvasLayer" parent="." unique_id=911539961]
+script = ExtResource("2_t53kv")
+
+[node name="ColorRect" type="ColorRect" parent="WarnigUI" unique_id=1672988950]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0.56078434)
+
+[node name="OptionsMenu" parent="WarnigUI" unique_id=1187895529 instance=ExtResource("4_v5o8s")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1619309201]
+libraries/ = SubResource("AnimationLibrary_cliwv")
+autoplay = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=162203525]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1528025536]
+position = Vector2(0, -9.395973)
+shape = SubResource("CircleShape2D_v5o8s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1427261101]
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer" unique_id=1259024662]
+anchors_preset = -1
+anchor_left = 0.0034722222
+anchor_top = -0.010802469
+anchor_right = 0.45606825
+anchor_bottom = 0.021699952
+offset_left = 315.0
+offset_top = 54.0
+offset_right = 318.60938
+offset_bottom = 61.93843
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=377509112]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -261.0
+offset_top = 44.0
+offset_right = 264.0
+offset_bottom = 71.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_2q8qj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vgnew")
+max_value = 120.0
+value = 120.0
+show_percentage = false
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer" unique_id=2008291318]
+anchors_preset = -1
+anchor_left = 0.0034722222
+anchor_top = -0.010802469
+anchor_right = 0.46040854
+anchor_bottom = 0.027872792
+offset_left = 310.0
+offset_top = 87.0
+offset_right = 313.60938
+offset_bottom = 94.93843
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AmmoLabel" type="Label" parent="CanvasLayer" unique_id=2016474146]
+offset_left = 316.0
+offset_top = 76.0
+offset_right = 838.0
+offset_bottom = 115.0
+text = "BALAS: ∞"
+label_settings = SubResource("LabelSettings_y4bea")
+
+[node name="ColorRect7" type="ColorRect" parent="CanvasLayer" unique_id=167273752]
+anchors_preset = -1
+anchor_left = 0.0034722222
+anchor_top = -0.010802469
+anchor_right = 0.46040854
+anchor_bottom = 0.027872792
+offset_top = 605.99994
+offset_right = -508.06
+offset_bottom = 618.73956
+scale = Vector2(15.329543, 0.9788067)
+color = Color(0, 0, 0, 1)
+
+[node name="name" type="Label" parent="CanvasLayer" unique_id=1803609798]
+offset_left = 125.00001
+offset_top = 603.0001
+offset_right = 471.7228
+offset_bottom = 667.3091
+scale = Vector2(0.41820145, 0.41984624)
+theme_override_constants/outline_size = 8
+label_settings = SubResource("LabelSettings_2q8qj")
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1473584142]
+offset_left = 13.0
+offset_top = 605.00006
+offset_right = 68.0
+offset_bottom = 625.22784
+scale = Vector2(0.41820145, 0.41984624)
+theme_override_constants/outline_size = 8
+text = "Player:"
+label_settings = SubResource("LabelSettings_2q8qj")
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

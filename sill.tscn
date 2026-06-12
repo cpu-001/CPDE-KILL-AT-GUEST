@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dnft87yjwq2sr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h48og"]
+size = Vector2(40, 50)
+
+[node name="sill" type="Node2D" unique_id=664295498]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=753477414]
+offset_top = -3.0
+offset_right = 40.0
+offset_bottom = 5.0
+color = Color(0.31471166, 0.14250118, 0.06172938, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=1472574750]
+offset_left = 6.0
+offset_top = -7.0
+offset_right = 39.0
+offset_bottom = -3.0
+color = Color(0.6017916, 0, 0.062336363, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=354738888]
+offset_left = 7.0
+offset_top = -7.0
+offset_right = 38.0
+color = Color(0.6017916, 0, 0.062336363, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1983916316]
+offset_right = 6.0
+offset_bottom = 43.0
+color = Color(0.31471166, 0.14250118, 0.06172938, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=2127901827]
+offset_left = 34.0
+offset_right = 40.0
+offset_bottom = 43.0
+color = Color(0.31471166, 0.14250118, 0.06172938, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=635039149]
+offset_top = -33.0
+offset_right = 6.0
+color = Color(0.31471166, 0.14250118, 0.06172938, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1352273091]
+offset_left = 2.5486512
+offset_top = -64.03487
+offset_right = 8.596962
+offset_bottom = -31.034866
+rotation = 0.077098034
+color = Color(0.31471166, 0.14250118, 0.06172938, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=509736435]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=104439225]
+position = Vector2(20, 18)
+shape = SubResource("RectangleShape2D_h48og")

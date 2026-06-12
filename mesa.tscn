@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bd64ommc407u3"]
+
+[node name="mesa" type="Node2D" unique_id=2109786196]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=286231623]
+offset_left = -39.0
+offset_right = 40.0
+offset_bottom = 25.0
+color = Color(0.3137255, 0.14117648, 0.0627451, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1735127955]
+offset_left = -104.0
+offset_top = 1.0
+offset_right = -39.0
+offset_bottom = 17.0
+color = Color(0.3137255, 0.14117648, 0.0627451, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=259581906]
+offset_left = 40.0
+offset_top = 1.0
+offset_right = 105.0
+offset_bottom = 17.0
+color = Color(0.3137255, 0.14117648, 0.0627451, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1255267521]
+offset_left = 105.0
+offset_top = 4.0
+offset_right = 170.0
+offset_bottom = 20.0
+rotation = 1.5628997
+color = Color(0.3137255, 0.14117648, 0.0627451, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1617071260]
+offset_left = -88.0
+offset_top = 2.0
+offset_right = -21.264359
+offset_bottom = 18.0
+rotation = 1.5628997
+color = Color(0.3137255, 0.14117648, 0.0627451, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=1769351854]
+offset_left = -106.0
+offset_right = 107.0
+offset_bottom = 11.0
+color = Color(0.55226105, 0, 0.14980969, 1)

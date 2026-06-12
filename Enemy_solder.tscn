@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://nk7lxk7hcgsr"]
+
+[ext_resource type="Script" uid="uid://bfo70nsshuh0m" path="res://Enemy/enemy_solder.gd" id="1_xu64c"]
+[ext_resource type="PackedScene" uid="uid://bd5cxjkf4ep4o" path="res://particulsenemy.tscn" id="2_esrlh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esrlh"]
+size = Vector2(19.110168, 18.68644)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nt1ls"]
+radius = 82.117294
+
+[sub_resource type="Animation" id="Animation_esrlh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hands:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hands:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nt1ls"]
+resource_name = "idle"
+length = 1.47
+loop_mode = 1
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hands:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.42, 0.9284728),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 2,
+"values": [0.0, -0.38920844, 0.5358161]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hands:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9284728),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 2,
+"values": [Vector2(6, 9), Vector2(-27.999998, 0), Vector2(-11.000002, 5.9999976)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sb7ew"]
+_data = {
+&"RESET": SubResource("Animation_esrlh"),
+&"idle": SubResource("Animation_nt1ls")
+}
+
+[node name="EnemySolder" type="CharacterBody2D" unique_id=399035062 groups=["enemy"]]
+position = Vector2(-2, 77)
+script = ExtResource("1_xu64c")
+death_particles_scene = ExtResource("2_esrlh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2057246292]
+visibility_layer = 2
+position = Vector2(-2.1000004, -3.100006)
+scale = Vector2(4.72, 4.72)
+shape = SubResource("RectangleShape2D_esrlh")
+debug_color = Color(0.9913363, 0, 0.2728761, 0.41960785)
+
+[node name="Body" type="Node2D" parent="." unique_id=302685809]
+scale = Vector2(4.72, 4.72)
+
+[node name="ColorRect2" type="ColorRect" parent="Body" unique_id=1962674167]
+offset_left = -9.745763
+offset_top = -10.169492
+offset_right = 8.254237
+offset_bottom = 3.601695
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect11" type="ColorRect" parent="Body" unique_id=1993762262]
+offset_left = -5.084746
+offset_top = -8.2627125
+offset_right = 4.237289
+offset_bottom = 8.474577
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Body" unique_id=1313727065]
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 8.6864395
+offset_bottom = 2.9661016
+color = Color(0.56424916, 0.5913946, 0.59592205, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="Body" unique_id=385697396]
+offset_left = -4.025424
+offset_top = 0.42372894
+offset_right = 4.449152
+offset_bottom = 8.474577
+color = Color(0.5647059, 0.5921569, 0.59607846, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Body" unique_id=696256702]
+offset_left = -7.8389845
+offset_top = -4.2372885
+offset_right = -1.4830518
+offset_bottom = -1.7033911
+rotation = 0.16909115
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="Body" unique_id=1460716431]
+offset_left = 1.9067793
+offset_top = -3.1779664
+offset_right = 8.2627125
+offset_bottom = -0.64406896
+rotation = -0.17788775
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="Body" unique_id=747162462]
+offset_left = -3.3898306
+offset_top = 5.7203393
+offset_right = -2.542373
+offset_bottom = 7.838984
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="Body" unique_id=1022128252]
+offset_left = 3.177966
+offset_top = 5.932204
+offset_right = 4.025424
+offset_bottom = 8.050848
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="Body" unique_id=978431723]
+offset_left = 1.0593221
+offset_top = 5.7203393
+offset_right = 1.9067798
+offset_bottom = 7.838984
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect10" type="ColorRect" parent="Body" unique_id=649870605]
+offset_left = -0.6355932
+offset_top = 5.7203393
+offset_right = 0.21186447
+offset_bottom = 7.838984
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="Body" unique_id=1703828916]
+offset_left = -0.84745765
+offset_top = 0.21186441
+offset_right = 1.4830508
+offset_bottom = 2.9661024
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="hands" type="Node2D" parent="." unique_id=522247307]
+scale = Vector2(4.72, 4.72)
+
+[node name="ColorRect2" type="ColorRect" parent="hands" unique_id=1930088185]
+offset_left = -11.864408
+offset_top = 5.084746
+offset_right = -4.4491534
+offset_bottom = 11.966482
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="hands/ColorRect2" unique_id=1841799594]
+layout_mode = 0
+offset_left = 6.779661
+offset_top = 14.83051
+offset_right = 11.270082
+offset_bottom = 55.706898
+rotation = -3.296927
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="hands/ColorRect2" unique_id=147575607]
+layout_mode = 0
+offset_left = 7.794255
+offset_top = 14.748634
+offset_right = 12.284676
+offset_bottom = 55.625023
+rotation = -3.296927
+color = Color(0.6494164, 0.2689208, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="hands/ColorRect2" unique_id=1728193936]
+layout_mode = 0
+offset_left = 6.355931
+offset_top = 17.79661
+offset_right = 10.997814
+offset_bottom = 22.478802
+rotation = -2.565005
+color = Color(0.38113388, 0.40982735, 0.4029436, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="hands/ColorRect2" unique_id=152114125]
+layout_mode = 0
+offset_left = 0.63559306
+offset_top = 0.63559306
+offset_right = 8.050847
+offset_bottom = 7.517216
+color = Color(0.5058824, 0.54509807, 0.5529412, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="hands" unique_id=2107732472]
+offset_left = 4.6610165
+offset_top = 5.084746
+offset_right = 12.077278
+offset_bottom = 11.966482
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="hands/ColorRect3" unique_id=1507360427]
+layout_mode = 0
+offset_left = 1.2711874
+offset_top = 0.63559306
+offset_right = 8.687104
+offset_bottom = 7.517216
+color = Color(0.50432366, 0.54333824, 0.5537833, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1682886330]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=228230468]
+position = Vector2(0, 0.5)
+shape = SubResource("CircleShape2D_nt1ls")
+debug_color = Color(0.9578648, 0, 0.53289014, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=122192292]
+wait_time = 3.0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1356401751]
+libraries/ = SubResource("AnimationLibrary_sb7ew")
+autoplay = &"idle"

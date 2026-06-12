@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bq5xu6q4unbht"]
+
+[ext_resource type="Script" uid="uid://bl4w4s6jv1v3m" path="res://projectile/code/projectile.gd" id="1_vdc3j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxmwn"]
+radius = 22.0
+
+[node name="Area2D" type="Area2D" unique_id=1026830090 groups=["projectiles"]]
+script = ExtResource("1_vdc3j")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1861870895]
+offset_left = -5.0
+offset_top = -8.0
+offset_right = 5.0
+offset_bottom = 8.0
+color = Color(0.67086685, 0.67086715, 3.85046e-07, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1467630928]
+offset_left = -4.0
+offset_top = -7.0
+offset_right = 4.0
+offset_bottom = 7.0
+color = Color(0.8139271, 0.8139268, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=306904037]
+shape = SubResource("CircleShape2D_sxmwn")
+debug_color = Color(1, 1, 0, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
