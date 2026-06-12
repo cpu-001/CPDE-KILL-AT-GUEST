@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bd5cxjkf4ep4o"]
+
+[ext_resource type="Script" uid="uid://bymy8laff2nhf" path="res://particulsenemy.gd" id="1_o7efw"]
+
+[sub_resource type="Gradient" id="Gradient_ejvjg"]
+colors = PackedColorArray(0.38920996, 0.16960242, 2.4065375e-08, 1, 0.87038714, 1.4439225e-06, 1.2513996e-06, 1)
+
+[sub_resource type="Animation" id="Animation_ejvjg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o7efw"]
+resource_name = "esploxit"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8s6dl"]
+_data = {
+&"RESET": SubResource("Animation_ejvjg"),
+&"esploxit": SubResource("Animation_o7efw")
+}
+
+[node name="fx" type="Node2D" unique_id=2145145377]
+script = ExtResource("1_o7efw")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=344712355]
+scale = Vector2(9.5, 9.5)
+emitting = false
+amount = 20
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+emission_shape = 2
+emission_sphere_radius = 7.26
+gravity = Vector2(0, 0)
+angular_velocity_min = -720.0
+angular_velocity_max = -720.0
+scale_amount_min = 0.0
+scale_amount_max = 12.98
+color = Color(1, 0, 0, 1)
+color_ramp = SubResource("Gradient_ejvjg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1685013552]
+libraries/ = SubResource("AnimationLibrary_8s6dl")

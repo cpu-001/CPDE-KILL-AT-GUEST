@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://251gstgoywk"]
+
+[ext_resource type="Script" uid="uid://c0un1eq2jh5k" path="res://vida.gd" id="1_t2nme"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i2cj7"]
+radius = 61.03278
+
+[node name="Vida" type="Area2D" unique_id=2005080809]
+script = ExtResource("1_t2nme")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752689309]
+shape = SubResource("CircleShape2D_i2cj7")
+debug_color = Color(1.540184e-06, 0.650335, 0.116145946, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=717682635]
+offset_left = -37.0
+offset_top = -11.000267
+offset_right = 43.0
+offset_bottom = 8.999733
+color = Color(0, 1, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1785125737]
+offset_left = -8.0
+offset_top = 36.999733
+offset_right = 72.0
+offset_bottom = 56.999733
+rotation = -1.5682052
+color = Color(0, 1, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=266865105]
+offset_left = -40.0
+offset_top = -7.000534
+offset_right = 40.0
+offset_bottom = 12.999466
+color = Color(0, 0.7155085, 3.85046e-07, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=941633541]
+offset_left = -11.0
+offset_top = 40.999466
+offset_right = 69.0
+offset_bottom = 60.999466
+rotation = -1.5682052
+color = Color(0, 0.7155085, 3.85046e-07, 1)

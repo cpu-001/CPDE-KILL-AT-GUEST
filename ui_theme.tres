@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bcrbjsoditju4"]
+
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="1_touxu"]
+
+[resource]
+Label/constants/outline_size = 20
+Label/fonts/font = ExtResource("1_touxu")

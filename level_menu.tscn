@@ -1,0 +1,659 @@
+[gd_scene format=3 uid="uid://cuh3yiw3infus"]
+
+[ext_resource type="Script" uid="uid://dr6xet5e47c6l" path="res://level_menu.gd" id="1_pssaq"]
+[ext_resource type="Texture2D" uid="uid://bm3f784rqngsc" path="res://Captura de pantalla 2026-06-08 041105.png" id="2_mcy63"]
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="3_g3bd0"]
+[ext_resource type="AudioStream" uid="uid://blb4evcknl13t" path="res://440927__joe_anderson22__chilly-a-chill-low-key-beat.wav" id="4_krrsl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_krrsl"]
+font = ExtResource("3_g3bd0")
+font_size = 44
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_g3bd0"]
+resource_name = "EASY"
+length = 1.03
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_krrsl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lnidy"]
+_data = {
+&"EASY": SubResource("Animation_g3bd0"),
+&"RESET": SubResource("Animation_krrsl")
+}
+
+[sub_resource type="Animation" id="Animation_lnidy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AudioStreamPlayer2D:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_w32vy"]
+resource_name = "transtitions"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.100000024),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AudioStreamPlayer2D:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.64),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gd4f1"]
+_data = {
+&"RESET": SubResource("Animation_lnidy"),
+&"transtitions": SubResource("Animation_w32vy")
+}
+
+[node name="LevelMenu" type="Control" unique_id=692351263]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -650.0
+offset_bottom = -650.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pssaq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="." unique_id=690379267]
+
+[node name="ColorRect80" type="ColorRect" parent="Node2D" unique_id=1686762088]
+offset_left = 86.45924
+offset_top = 513.04926
+offset_right = 1069.6228
+offset_bottom = 588.4006
+rotation = 0.002256453
+color = Color(0.0003610769, 0.17043912, 0.6049889, 1)
+
+[node name="ColorRect81" type="ColorRect" parent="Node2D" unique_id=1529231253]
+offset_left = 80.975204
+offset_top = 25.986282
+offset_right = 1063.1367
+offset_bottom = 72.324135
+rotation = 0.002256453
+color = Color(0.00030986578, 0.15653846, 0.5642935, 1)
+
+[node name="level_1" type="Button" parent="Node2D" unique_id=35912664]
+offset_left = 104.0
+offset_top = 186.0
+offset_right = 360.0
+offset_bottom = 421.0
+mouse_default_cursor_shape = 2
+disabled = true
+
+[node name="level_2" type="Button" parent="Node2D" unique_id=112243158]
+offset_left = 467.0
+offset_top = 161.0
+offset_right = 700.0
+offset_bottom = 421.0
+mouse_default_cursor_shape = 2
+
+[node name="level_3" type="Button" parent="Node2D" unique_id=1746035268]
+offset_left = 804.0
+offset_top = 130.0
+offset_right = 1051.0
+offset_bottom = 424.0
+mouse_default_cursor_shape = 2
+
+[node name="level_4" type="Button" parent="Node2D" unique_id=853927272]
+offset_left = 85.0
+offset_top = 516.0
+offset_right = 1067.0
+offset_bottom = 591.0
+disabled = true
+
+[node name="level_5" type="Button" parent="Node2D" unique_id=290959615]
+offset_left = 82.0
+offset_top = 27.0
+offset_right = 1064.0
+offset_bottom = 75.0
+disabled = true
+
+[node name="LeveDeco" type="Node2D" parent="Node2D" unique_id=619055666]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/LeveDeco" unique_id=2044909605]
+offset_left = 309.0
+offset_top = 366.0
+offset_right = 349.0
+offset_bottom = 406.0
+color = Color(0.23681828, 0.6861811, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/LeveDeco" unique_id=245853329]
+offset_left = 645.0
+offset_top = 368.0
+offset_right = 685.0
+offset_bottom = 408.0
+color = Color(0.2644909, 0.62447894, 0.7608768, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/LeveDeco" unique_id=296971095]
+offset_left = 1001.0
+offset_top = 370.0
+offset_right = 1041.0
+offset_bottom = 410.0
+color = Color(0.7120649, 3.715694e-05, 0.53784335, 1)
+
+[node name="leve1" type="Node2D" parent="Node2D/LeveDeco" unique_id=1256798779]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=459496377]
+offset_left = 146.0
+offset_top = 221.0
+offset_right = 187.0
+offset_bottom = 346.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1534892848]
+offset_left = 278.0
+offset_top = 222.0
+offset_right = 318.0
+offset_bottom = 345.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=569842679]
+offset_left = 269.0
+offset_top = 222.0
+offset_right = 327.0
+offset_bottom = 236.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1876237197]
+offset_left = 270.0
+offset_top = 208.0
+offset_right = 280.0
+offset_bottom = 222.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1519929163]
+offset_left = 316.0
+offset_top = 208.0
+offset_right = 326.0
+offset_bottom = 222.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1274196884]
+offset_left = 293.0
+offset_top = 208.0
+offset_right = 303.0
+offset_bottom = 222.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=16590479]
+offset_left = 138.0
+offset_top = 208.0
+offset_right = 148.0
+offset_bottom = 222.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=327894329]
+offset_left = 184.0
+offset_top = 208.0
+offset_right = 194.0
+offset_bottom = 222.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1900044818]
+offset_left = 161.0
+offset_top = 208.0
+offset_right = 171.0
+offset_bottom = 222.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1552403980]
+offset_left = 137.0
+offset_top = 221.0
+offset_right = 195.0
+offset_bottom = 235.0
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1841081093]
+offset_left = 187.0
+offset_top = 266.0
+offset_right = 278.0
+offset_bottom = 340.0
+color = Color(0.29954728, 0.2995475, 0.29954743, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1780328648]
+offset_left = 187.0
+offset_top = 266.0
+offset_right = 278.0
+offset_bottom = 274.0
+color = Color(0.16565639, 0.16565642, 0.16565636, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1081029320]
+offset_left = 146.0
+offset_top = 233.0
+offset_right = 151.0
+offset_bottom = 346.0
+color = Color(0.16565639, 0.16565642, 0.16565636, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=768239256]
+offset_left = 278.0
+offset_top = 233.0
+offset_right = 283.0
+offset_bottom = 346.0
+color = Color(0.16565639, 0.16565642, 0.16565636, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1184608693]
+offset_left = 137.0
+offset_top = 227.0
+offset_right = 195.0
+offset_bottom = 235.0
+color = Color(0.16565639, 0.16565642, 0.16565636, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1326607792]
+offset_left = 269.0
+offset_top = 228.0
+offset_right = 327.0
+offset_bottom = 236.0
+color = Color(0.16565639, 0.16565642, 0.16565636, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/LeveDeco/leve1" unique_id=1173986052]
+offset_left = 216.0
+offset_top = 302.0
+offset_right = 251.0
+offset_bottom = 340.0
+color = Color(0, 0, 0, 1)
+
+[node name="leve2" type="Node2D" parent="Node2D/LeveDeco" unique_id=78531530]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=1046193337]
+offset_left = 517.0
+offset_top = 200.0
+offset_right = 652.0
+offset_bottom = 341.0
+color = Color(0, 0.1764706, 0.13725491, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=1805781825]
+offset_left = 508.0
+offset_top = 326.0
+offset_right = 659.0
+offset_bottom = 348.0
+color = Color(0, 0.3254902, 0.36078432, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=74644134]
+offset_left = 508.0
+offset_top = 194.0
+offset_right = 660.0
+offset_bottom = 215.0
+color = Color(0, 0.3254902, 0.36078432, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=2004392918]
+offset_left = 633.0
+offset_top = 202.0
+offset_right = 646.0
+offset_bottom = 335.0
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=495886860]
+offset_left = 523.0
+offset_top = 203.0
+offset_right = 536.0
+offset_bottom = 336.0
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=1529410340]
+offset_left = 556.0
+offset_top = 198.0
+offset_right = 569.0
+offset_bottom = 341.0
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Node2D/LeveDeco/leve2" unique_id=35449695]
+offset_left = 595.0
+offset_top = 198.0
+offset_right = 608.0
+offset_bottom = 340.0
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="leve3" type="Node2D" parent="Node2D/LeveDeco" unique_id=1647974537]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=411815451]
+offset_left = 866.0
+offset_top = 218.0
+offset_right = 995.0
+offset_bottom = 292.0
+color = Color(0.6784314, 0.09411765, 1, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=1277801820]
+offset_left = 861.0
+offset_top = 206.0
+offset_right = 1000.0
+offset_bottom = 227.0
+color = Color(0.56078434, 0, 0.654902, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=2024908306]
+offset_left = 866.0
+offset_top = 188.0
+offset_right = 902.0
+offset_bottom = 207.0
+color = Color(0.56078434, 0, 0.654902, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=1876011436]
+offset_left = 909.0
+offset_top = 188.0
+offset_right = 950.0
+offset_bottom = 207.0
+color = Color(0.56078434, 0, 0.654902, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=967492019]
+offset_left = 957.0
+offset_top = 188.0
+offset_right = 995.0
+offset_bottom = 207.0
+color = Color(0.56078434, 0, 0.654902, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=1610698582]
+offset_left = 900.0
+offset_top = 252.0
+offset_right = 960.0
+offset_bottom = 336.0
+color = Color(0.6784314, 0.09411765, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=1895706916]
+offset_left = 875.0
+offset_top = 275.0
+offset_right = 915.0
+offset_bottom = 284.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=95167777]
+offset_left = 921.0
+offset_top = 289.0
+offset_right = 940.0
+offset_bottom = 309.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=550113601]
+offset_left = 906.0
+offset_top = 326.0
+offset_right = 914.0
+offset_bottom = 337.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=2059209642]
+offset_left = 920.0
+offset_top = 326.0
+offset_right = 928.0
+offset_bottom = 337.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=1227635349]
+offset_left = 933.0
+offset_top = 326.0
+offset_right = 941.0
+offset_bottom = 337.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=2144350011]
+offset_left = 946.0
+offset_top = 326.0
+offset_right = 954.0
+offset_bottom = 337.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/LeveDeco/leve3" unique_id=1648103040]
+offset_left = 946.0
+offset_top = 276.0
+offset_right = 988.0
+offset_bottom = 284.0
+color = Color(0.26666668, 0, 0.32156864, 1)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=759102324]
+offset_left = 120.0
+offset_top = 365.0
+offset_right = 309.0
+offset_bottom = 406.0
+text = "SONARY"
+label_settings = SubResource("LabelSettings_krrsl")
+
+[node name="Label2" type="Label" parent="Node2D" unique_id=974383071]
+offset_left = 482.0
+offset_top = 367.0
+offset_right = 645.0
+offset_bottom = 408.0
+text = "KHALAY"
+label_settings = SubResource("LabelSettings_krrsl")
+
+[node name="Label3" type="Label" parent="Node2D" unique_id=1536985296]
+offset_left = 816.0
+offset_top = 369.0
+offset_right = 1001.0
+offset_bottom = 410.0
+text = "Demonry"
+label_settings = SubResource("LabelSettings_krrsl")
+
+[node name="Stars" type="Node2D" parent="Node2D" unique_id=508566068]
+
+[node name="CapturaDePantalla20260608041107" type="Sprite2D" parent="Node2D/Stars" unique_id=40352732]
+modulate = Color(1, 1, 1, 0.1254902)
+position = Vector2(328, 450.00006)
+scale = Vector2(0.26056337, 0.25714287)
+texture = ExtResource("2_mcy63")
+
+[node name="CapturaDePantalla20260608041108" type="Sprite2D" parent="Node2D/Stars" unique_id=1436522048]
+modulate = Color(1, 1, 1, 0.1254902)
+position = Vector2(923.75, 454)
+scale = Vector2(0.26056337, 0.25714287)
+texture = ExtResource("2_mcy63")
+
+[node name="CapturaDePantalla20260608041109" type="Sprite2D" parent="Node2D/Stars" unique_id=1898899521]
+modulate = Color(1, 1, 1, 0.1254902)
+position = Vector2(974.96497, 454)
+scale = Vector2(0.26056337, 0.25714287)
+texture = ExtResource("2_mcy63")
+
+[node name="CapturaDePantalla20260608041110" type="Sprite2D" parent="Node2D/Stars" unique_id=51524389]
+modulate = Color(1, 1, 1, 0.1254902)
+position = Vector2(1025.85, 454)
+scale = Vector2(0.26056337, 0.25714287)
+texture = ExtResource("2_mcy63")
+
+[node name="CapturaDePantalla20260608041111" type="Sprite2D" parent="Node2D/Stars" unique_id=743001005]
+modulate = Color(1, 1, 1, 0.1254902)
+position = Vector2(616.75, 450)
+scale = Vector2(0.26056337, 0.25714287)
+texture = ExtResource("2_mcy63")
+
+[node name="CapturaDePantalla20260608041112" type="Sprite2D" parent="Node2D/Stars" unique_id=1199797869]
+modulate = Color(1, 1, 1, 0.1254902)
+position = Vector2(667.635, 450)
+scale = Vector2(0.26056337, 0.25714287)
+texture = ExtResource("2_mcy63")
+
+[node name="locked2" type="ColorRect" parent="Node2D" unique_id=1519407246]
+offset_left = 465.0
+offset_top = 161.0
+offset_right = 698.0
+offset_bottom = 424.0
+color = Color(0, 0, 0, 0.7647059)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/locked2" unique_id=16279857]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 128.0
+offset_right = 160.0
+offset_bottom = 197.0
+color = Color(0.5543863, 0.4113842, 0.15914801, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/locked2" unique_id=659158054]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 66.0
+offset_right = 102.0
+offset_bottom = 128.0
+color = Color(0.20790613, 0.19931564, 0.19917908, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/locked2" unique_id=985713102]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 66.0
+offset_right = 155.0
+offset_bottom = 128.0
+color = Color(0.20790613, 0.19931564, 0.19917908, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/locked2" unique_id=1728229197]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 66.0
+offset_right = 155.0
+offset_bottom = 85.0
+color = Color(0.20790613, 0.19931564, 0.19917908, 1)
+
+[node name="locked3" type="ColorRect" parent="Node2D" unique_id=1524323822]
+offset_left = 803.0
+offset_top = 130.0
+offset_right = 1050.0
+offset_bottom = 424.0
+color = Color(0, 0, 0, 0.7647059)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D/locked3" unique_id=490916748]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 139.0
+offset_right = 170.0
+offset_bottom = 208.0
+color = Color(0.5529412, 0.4117647, 0.16078432, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Node2D/locked3" unique_id=1959495677]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 77.0
+offset_right = 112.0
+offset_bottom = 139.0
+color = Color(0.20790613, 0.19931564, 0.19917908, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Node2D/locked3" unique_id=861806650]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 77.0
+offset_right = 165.0
+offset_bottom = 139.0
+color = Color(0.20790613, 0.19931564, 0.19917908, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Node2D/locked3" unique_id=868380618]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 77.0
+offset_right = 165.0
+offset_bottom = 96.0
+color = Color(0.20790613, 0.19931564, 0.19917908, 1)
+
+[node name="animationplayer" type="AnimationPlayer" parent="Node2D" unique_id=2128426270]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_lnidy")
+
+[node name="Timer" type="Timer" parent="Node2D" unique_id=1419345981]
+wait_time = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1012297348]
+root_node = NodePath("../ColorRect")
+libraries/ = SubResource("AnimationLibrary_gd4f1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1328223780]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1087375989]
+stream = ExtResource("4_krrsl")
+autoplay = true
+attenuation = 1.1095679
+
+[connection signal="pressed" from="Node2D/level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Node2D/level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Node2D/level_3" to="." method="_on_level_3_pressed"]
+[connection signal="timeout" from="Node2D/Timer" to="." method="_on_timer_timeout"]

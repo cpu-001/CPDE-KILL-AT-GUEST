@@ -1,0 +1,444 @@
+[gd_scene format=3 uid="uid://dyqc5ug6pebp1"]
+
+[ext_resource type="Script" uid="uid://dks6rkbfwx2md" path="res://moddify.gd" id="1_5asru"]
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="2_b22uq"]
+[ext_resource type="Texture2D" uid="uid://dosecun1cs05y" path="res://Captura de pantalla 2026-06-08 175326.png" id="3_rfm6b"]
+
+[sub_resource type="Animation" id="Animation_rfm6b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5xk7r"]
+resource_name = "desaparicion"
+length = 1.205
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(508, 140), Vector2(792, 135)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.100000024, 1.1333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.205),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sujw6"]
+_data = {
+&"RESET": SubResource("Animation_rfm6b"),
+&"desaparicion": SubResource("Animation_5xk7r")
+}
+
+[node name="MENUD" type="Control" unique_id=1490384682]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5asru")
+
+[node name="detro" type="Node2D" parent="." unique_id=1246025267]
+
+[node name="ColorRect82" type="ColorRect" parent="detro" unique_id=781428433]
+modulate = Color(1, 1, 1, 0.5019608)
+offset_left = 3.0906792
+offset_top = 2.9999847
+offset_right = 241.22368
+offset_bottom = 402.46277
+rotation = 0.002256453
+color = Color(0.0002721794, 0.14545411, 0.53184325, 1)
+
+[node name="lentes" type="Button" parent="." unique_id=1086629095]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 94.0
+offset_bottom = 88.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_b22uq")
+text = "LENTEs"
+
+[node name="cara" type="Button" parent="." unique_id=155456097]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 148.0
+offset_right = 84.0
+offset_bottom = 203.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_b22uq")
+text = "Cara"
+
+[node name="gorra" type="Button" parent="." unique_id=2089512674]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 93.0
+offset_right = 85.0
+offset_bottom = 145.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+text = "GORRA"
+
+[node name="gorra2" type="Button" parent="." unique_id=471873080]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 13.0
+offset_right = 235.0
+offset_bottom = 204.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+disabled = true
+
+[node name="gorra3" type="Button" parent="." unique_id=1385852780]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 21.0
+offset_right = 230.0
+offset_bottom = 82.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+disabled = true
+
+[node name="gorra4" type="Button" parent="." unique_id=1763078976]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 86.0
+offset_right = 230.0
+offset_bottom = 140.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+disabled = true
+
+[node name="gorra7" type="Button" parent="." unique_id=1798029144]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 150.0
+offset_right = 230.0
+offset_bottom = 196.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+disabled = true
+
+[node name="gorra5" type="Button" parent="." unique_id=1856040635]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 407.0
+offset_right = 266.0
+offset_bottom = 436.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+disabled = true
+
+[node name="gorra6" type="Button" parent="." unique_id=211810476]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -33.0
+offset_right = 263.0
+offset_bottom = -4.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+disabled = true
+
+[node name="Button" type="Button" parent="." unique_id=1429923950]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 342.0
+offset_right = 225.0
+offset_bottom = 378.0
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_b22uq")
+text = "BACK"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=670280136]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 280.0
+offset_right = 204.0
+offset_bottom = 306.0
+color = Color(0.34509805, 1, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1689943236]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 279.0
+offset_right = 137.0
+offset_bottom = 306.0
+color = Color(0, 0, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=266175146]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 279.0
+offset_right = 73.0
+offset_bottom = 306.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=636566511]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 222.0
+offset_right = 72.0
+offset_bottom = 249.0
+color = Color(1, 0, 0.6156863, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=710852299]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 222.0
+offset_right = 136.0
+offset_bottom = 249.0
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=1976733971]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 222.0
+offset_right = 205.0
+offset_bottom = 249.0
+color = Color(0, 0, 0, 1)
+
+[node name="red" type="Button" parent="." unique_id=1704905571]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 267.0
+offset_right = 74.0
+offset_bottom = 317.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+
+[node name="pink" type="Button" parent="." unique_id=878106147]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 210.0
+offset_right = 73.0
+offset_bottom = 260.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+
+[node name="black" type="Button" parent="." unique_id=1364473792]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 0
+offset_left = 150.0
+offset_top = 210.0
+offset_right = 206.0
+offset_bottom = 260.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+
+[node name="white" type="Button" parent="." unique_id=341506698]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 0
+offset_left = 81.0
+offset_top = 210.0
+offset_right = 137.0
+offset_bottom = 260.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+
+[node name="green" type="Button" parent="." unique_id=840837439]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 0
+offset_left = 149.0
+offset_top = 268.0
+offset_right = 205.0
+offset_bottom = 318.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+
+[node name="blue" type="Button" parent="." unique_id=2117734769]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 0
+offset_left = 82.0
+offset_top = 267.0
+offset_right = 138.0
+offset_bottom = 317.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_b22uq")
+
+[node name="Gorra" type="Node2D" parent="." unique_id=2111681344]
+
+[node name="ColorRect" type="ColorRect" parent="Gorra" unique_id=1313081787]
+offset_left = 141.42462
+offset_top = 101.0
+offset_right = 159.47133
+offset_bottom = 109.15286
+scale = Vector2(2.81, 2.81)
+color = Color(0.097767256, 0.345929, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Gorra" unique_id=709925577]
+offset_left = 141.0
+offset_top = 120.0
+offset_right = 164.16039
+offset_bottom = 122.33546
+scale = Vector2(2.81, 2.81)
+color = Color(0.08996763, 0.10361377, 0.100383885, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Gorra" unique_id=977924838]
+offset_left = 178.0
+offset_top = 108.0
+offset_right = 183.03282
+offset_bottom = 111.184715
+scale = Vector2(2.81, 2.81)
+color = Color(0.8807197, 0.65433484, 0, 1)
+
+[node name="Lentes02" type="Node2D" parent="." unique_id=335526383]
+
+[node name="ColorRect" type="ColorRect" parent="Lentes02" unique_id=1329199767]
+offset_left = 177.0
+offset_top = 38.999992
+offset_right = 184.64331
+offset_bottom = 45.157104
+scale = Vector2(3.905, 3.905)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Lentes02" unique_id=1746023946]
+offset_left = 141.0
+offset_top = 38.999992
+offset_right = 148.00636
+offset_bottom = 45.157104
+scale = Vector2(3.905, 3.905)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Lentes02" unique_id=739872791]
+offset_left = 180.0
+offset_top = 57.999996
+offset_right = 182.76009
+offset_bottom = 58.63694
+scale = Vector2(3.905, 3.905)
+
+[node name="ColorRect7" type="ColorRect" parent="Lentes02" unique_id=1388602965]
+offset_left = 143.99998
+offset_top = 57.999996
+offset_right = 146.76007
+offset_bottom = 58.63694
+scale = Vector2(3.905, 3.905)
+
+[node name="ColorRect3" type="ColorRect" parent="Lentes02" unique_id=228939934]
+offset_left = 113.99999
+offset_top = 39.999996
+offset_right = 121.6433
+offset_bottom = 42.547768
+scale = Vector2(3.905, 3.905)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Lentes02" unique_id=385472424]
+offset_left = 158.0
+offset_top = 40.0
+offset_right = 165.64331
+offset_bottom = 42.54777
+scale = Vector2(3.905, 3.905)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=826393266]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 154.0
+offset_right = 222.0
+offset_bottom = 193.0
+
+[node name="CapturaDePantalla20260608175326" type="Sprite2D" parent="." unique_id=614965763]
+position = Vector2(167.5, 173)
+scale = Vector2(0.10803324, 0.09677417)
+texture = ExtResource("3_rfm6b")
+
+[node name="ModdifyB" type="AnimationPlayer" parent="." unique_id=620437614]
+libraries/ = SubResource("AnimationLibrary_sujw6")
+
+[connection signal="pressed" from="lentes" to="." method="_on_lentes_pressed"]
+[connection signal="pressed" from="cara" to="." method="_on_cara_pressed"]
+[connection signal="pressed" from="gorra" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="gorra2" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="gorra3" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="gorra4" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="gorra7" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="gorra5" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="gorra6" to="." method="_on_gorra_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="pink" to="." method="_on_pink_pressed"]
+[connection signal="pressed" from="black" to="." method="_on_black_pressed"]
+[connection signal="pressed" from="white" to="." method="_on_white_pressed"]
+[connection signal="pressed" from="green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="blue" to="." method="_on_blue_pressed"]

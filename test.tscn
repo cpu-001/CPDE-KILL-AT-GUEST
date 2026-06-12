@@ -1,0 +1,533 @@
+[gd_scene format=3 uid="uid://cl77gu3rjgb03"]
+
+[ext_resource type="Script" uid="uid://1xdeev425dau" path="res://test.gd" id="1_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://bsi66agvwsauk" path="res://Move .tscn" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://chdy50ye0lao2" path="res://Decos/t_rower.tscn" id="2_ykrsh"]
+[ext_resource type="Script" uid="uid://bxb87x0so8uss" path="res://level_manager.gd" id="3_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://bqxanj17fjts" path="res://Decos/LAMP.tscn" id="3_g14j6"]
+[ext_resource type="Script" uid="uid://d8fio0w75pf3" path="res://enemy_spawner.gd" id="4_ppyta"]
+[ext_resource type="PackedScene" uid="uid://dr4trktyc5dkf" path="res://Decos/paint2.tscn" id="4_vbegm"]
+[ext_resource type="Texture2D" uid="uid://b25squ61838kj" path="res://ChatGPT Image 11 jun 2026, 08_43_41 p.m..png" id="5_00tp4"]
+[ext_resource type="PackedScene" uid="uid://c6hx0lo4k3sf1" path="res://Decos/jauil.tscn" id="5_ehkex"]
+[ext_resource type="PackedScene" uid="uid://bu6i7pixw4ckm" path="res://Decos/Paint.tscn" id="6_xersf"]
+
+[sub_resource type="Animation" id="Animation_ehkex"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JAUIL2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25399905]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("JAUIL3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.26289314]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("JAUIL:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.09773844]
+}
+
+[sub_resource type="Animation" id="Animation_xersf"]
+resource_name = "dle"
+length = 2.595
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JAUIL2:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.25399905, -0.3004713]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("JAUIL3:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23, 1.54),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.26289314, 0.40317106]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("JAUIL:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.046866372, 1.2771087),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.09773844, -0.19373155]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_00tp4"]
+_data = {
+&"RESET": SubResource("Animation_ehkex"),
+&"dle": SubResource("Animation_xersf")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
+size = Vector2(1332, 162)
+
+[sub_resource type="Animation" id="Animation_ppyta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ykrsh"]
+resource_name = "cancel"
+length = 0.445
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.445),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g14j6"]
+_data = {
+&"RESET": SubResource("Animation_ppyta"),
+&"cancel": SubResource("Animation_ykrsh")
+}
+
+[node name="Node2D" type="Node2D" unique_id=420444179]
+script = ExtResource("1_6uqi0")
+
+[node name="deco1" type="ColorRect" parent="." unique_id=495724668]
+visible = false
+offset_left = -190.0
+offset_top = -636.0
+offset_right = 1348.0
+offset_bottom = 743.0
+color = Color(0.07284262, 0.072842635, 0.072842576, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="deco1" unique_id=1795058187]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 1127.0
+color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="deco1" unique_id=834042988]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 1033.0
+color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="deco1" unique_id=1528957571]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 947.0
+color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="deco1" unique_id=567313652]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 850.0
+color = Color(0.2738726, 0.27387276, 0.27387273, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="deco1" unique_id=678285159]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 767.0
+color = Color(0.3553137, 0.35531354, 0.35531357, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="deco1" unique_id=2145422419]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 687.0
+color = Color(0.48962224, 0.48962224, 0.48962206, 1)
+
+[node name="TRower" parent="deco1" unique_id=2026472865 instance=ExtResource("2_ykrsh")]
+position = Vector2(272, 647.99994)
+scale = Vector2(3.24, 3.24)
+
+[node name="TRower2" parent="deco1" unique_id=77083984 instance=ExtResource("2_ykrsh")]
+position = Vector2(1153.0001, 663)
+scale = Vector2(3.24, 3.24)
+
+[node name="ColorRect9" type="ColorRect" parent="deco1" unique_id=1117208214]
+layout_mode = 0
+offset_top = 1208.0
+offset_right = 1554.0
+offset_bottom = 1500.0
+color = Color(0.26753134, 0.27719045, 0.26753008, 1)
+
+[node name="Node2D" parent="deco1" unique_id=1988715675 instance=ExtResource("3_g14j6")]
+position = Vector2(422, 836)
+
+[node name="Node2D2" parent="deco1" unique_id=26804787 instance=ExtResource("3_g14j6")]
+position = Vector2(1019, 939)
+
+[node name="Node2D3" parent="deco1" unique_id=260024040 instance=ExtResource("4_vbegm")]
+position = Vector2(557, 968)
+
+[node name="PointLight2D" type="PointLight2D" parent="deco1" unique_id=880359739]
+position = Vector2(424, 885)
+scale = Vector2(0.66347194, 0.6253179)
+color = Color(1, 1, 1, 0.078431375)
+energy = 5.6
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="PointLight2D2" type="PointLight2D" parent="deco1" unique_id=1956950126]
+position = Vector2(1004, 990)
+scale = Vector2(0.5076762, 0.5508266)
+color = Color(1, 1, 1, 0.078431375)
+energy = 7.8
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="deco2" type="ColorRect" parent="." unique_id=1064546062]
+visible = false
+offset_left = -190.0
+offset_top = -636.0
+offset_right = 1348.0
+offset_bottom = 743.0
+color = Color(0, 0.09958642, 0.0049040723, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="deco2" unique_id=2056681808]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 1127.0
+color = Color(1.06790104e-07, 0.12871411, 0.06819957, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="deco2" unique_id=836553795]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 1033.0
+color = Color(4.0911138e-07, 0.17579615, 0.13791344, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="deco2" unique_id=1980842973]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 947.0
+color = Color(7.219613e-08, 0.22736141, 0.20616505, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="deco2" unique_id=1490622079]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 850.0
+color = Color(4.813075e-08, 0.3137165, 0.3470534, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="deco2" unique_id=1421004739]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 767.0
+color = Color(0, 0.4, 0.49019608, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="deco2" unique_id=1029170652]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 935.0
+offset_right = 563.0
+offset_bottom = 1235.0
+color = Color(0, 0.09803922, 0.003921569, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="deco2" unique_id=16110124]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 950.0
+offset_right = 546.0
+offset_bottom = 1235.0
+color = Color(0, 0.12941177, 0.06666667, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="deco2" unique_id=384438688]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 979.0
+offset_right = 535.0
+offset_bottom = 1004.0
+color = Color(0, 0.09803922, 0.003921569, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="deco2" unique_id=176551862]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 1084.0
+offset_right = 539.0
+offset_bottom = 1109.0
+color = Color(0, 0.22745098, 0.20784314, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="deco2" unique_id=360881445]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 687.0
+color = Color(0, 0.55304956, 0.6346973, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="deco2" unique_id=852769840]
+layout_mode = 0
+offset_top = 1208.0
+offset_right = 1554.0
+offset_bottom = 1500.0
+color = Color(0, 0.32406336, 0.35895872, 1)
+
+[node name="JAUIL" parent="deco2" unique_id=369001973 instance=ExtResource("5_ehkex")]
+position = Vector2(260, 568)
+rotation = 0.09773844
+
+[node name="JAUIL2" parent="deco2" unique_id=513616342 instance=ExtResource("5_ehkex")]
+position = Vector2(1256, 518)
+rotation = 0.25399905
+
+[node name="JAUIL3" parent="deco2" unique_id=876728904 instance=ExtResource("5_ehkex")]
+position = Vector2(770.99994, 536)
+rotation = -0.26289314
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="deco2" unique_id=1510115068]
+libraries/ = SubResource("AnimationLibrary_00tp4")
+autoplay = &"dle"
+
+[node name="Node2D" parent="deco2" unique_id=696805944 instance=ExtResource("3_g14j6")]
+position = Vector2(342, 969)
+
+[node name="Node2D2" parent="deco2" unique_id=1872021197 instance=ExtResource("3_g14j6")]
+position = Vector2(611, 969)
+
+[node name="PointLight2D2" type="PointLight2D" parent="deco2" unique_id=2063761461]
+position = Vector2(608, 1013)
+scale = Vector2(0.5076762, 0.5508266)
+color = Color(1, 1, 1, 0.078431375)
+energy = 7.8
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="PointLight2D3" type="PointLight2D" parent="deco2" unique_id=80201179]
+position = Vector2(340, 1017.00006)
+scale = Vector2(0.5076762, 0.5508266)
+color = Color(1, 1, 1, 0.078431375)
+energy = 7.8
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="deco3" type="ColorRect" parent="." unique_id=1899531406]
+visible = false
+offset_left = -190.0
+offset_top = -636.0
+offset_right = 1348.0
+offset_bottom = 743.0
+color = Color(0.16844338, 0, 0.049463853, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="deco3" unique_id=518148138]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 1127.0
+color = Color(0.21321097, 9.325333e-08, 0.11045595, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="deco3" unique_id=129388035]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 1033.0
+color = Color(0.26702443, 1.6857795e-05, 0.23045892, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="deco3" unique_id=1811056689]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 947.0
+color = Color(0.33851615, 3.8889648e-05, 0.3078404, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="deco3" unique_id=1483076250]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 850.0
+color = Color(0.4555136, 0.00016427026, 0.46325797, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="deco3" unique_id=1811789301]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 767.0
+color = Color(0.55936444, 0.0007069445, 0.65424156, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="deco3" unique_id=419187128]
+layout_mode = 0
+offset_right = 1538.0
+offset_bottom = 687.0
+color = Color(0.67830104, 0.096023075, 1, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="deco3" unique_id=1737799641]
+layout_mode = 0
+offset_top = 1208.0
+offset_right = 1554.0
+offset_bottom = 1500.0
+color = Color(0.26706424, 0.00015844643, 0.31960946, 1)
+
+[node name="Node2D6" parent="deco3" unique_id=1733238806 instance=ExtResource("6_xersf")]
+position = Vector2(584, 929)
+
+[node name="Node2D7" parent="deco3" unique_id=726702840 instance=ExtResource("6_xersf")]
+position = Vector2(1037, 925)
+
+[node name="Node2D8" parent="deco3" unique_id=1819474013 instance=ExtResource("3_g14j6")]
+position = Vector2(383, 883)
+
+[node name="Node2D9" parent="deco3" unique_id=1348633403 instance=ExtResource("3_g14j6")]
+position = Vector2(789, 880)
+
+[node name="Node2D10" parent="deco3" unique_id=687606353 instance=ExtResource("3_g14j6")]
+position = Vector2(1268, 890)
+
+[node name="PointLight2D2" type="PointLight2D" parent="deco3" unique_id=2007634108]
+position = Vector2(1269, 932)
+scale = Vector2(0.5076762, 0.5508266)
+color = Color(1, 1, 1, 0.078431375)
+energy = 7.8
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="PointLight2D3" type="PointLight2D" parent="deco3" unique_id=324993037]
+position = Vector2(788.0001, 924.00006)
+scale = Vector2(0.5076762, 0.5508266)
+color = Color(1, 1, 1, 0.078431375)
+energy = 7.8
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="PointLight2D4" type="PointLight2D" parent="deco3" unique_id=2084713417]
+position = Vector2(385, 936)
+scale = Vector2(0.5076762, 0.5508266)
+color = Color(1, 1, 1, 0.078431375)
+energy = 7.8
+texture = ExtResource("5_00tp4")
+texture_scale = 2.15
+
+[node name="Darkness" type="ColorRect" parent="." unique_id=695024004]
+offset_left = -1324.0
+offset_top = -787.0
+offset_right = 2562.0
+offset_bottom = 1052.0
+color = Color(0, 0, 0, 0.43137255)
+
+[node name="move" parent="." unique_id=327233245 instance=ExtResource("2_8uh7m")]
+
+[node name="Players" type="Node2D" parent="." unique_id=436523691]
+position = Vector2(579, 499)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=912938601]
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="Node2D" unique_id=540273047]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D2" unique_id=1419957160]
+position = Vector2(576, 665)
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CharacterBody2D2" unique_id=965831876]
+visible = false
+offset_left = -190.0
+offset_top = 572.0
+offset_right = 1341.0
+offset_bottom = 864.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/CharacterBody2D2" unique_id=303390956]
+position = Vector2(579, 325)
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="Node2D" unique_id=1538961031]
+position = Vector2(-727, 596)
+rotation = -1.5735749
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D3" unique_id=1795021802]
+position = Vector2(606.2722, 622.687)
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/CharacterBody2D3" unique_id=2037903073]
+position = Vector2(959.3677, 1308.6709)
+rotation = -1.5695481
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="Node2D" unique_id=1077744209]
+position = Vector2(581, 544.99994)
+rotation = -1.5735749
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D4" unique_id=417212720]
+position = Vector2(568.1111, 680.5811)
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="LevelManager" type="Node2D" parent="." unique_id=714117971]
+script = ExtResource("3_6uqi0")
+
+[node name="EnemySpawner" type="Node2D" parent="." unique_id=1793142041]
+position = Vector2(572, 54)
+script = ExtResource("4_ppyta")
+
+[node name="Timer" type="Timer" parent="EnemySpawner" unique_id=329829203]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1312093058]
+offset_left = -19.0
+offset_top = -16.0
+offset_right = 1162.0
+offset_bottom = 660.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1986884012]
+root_node = NodePath("../ColorRect")
+libraries/ = SubResource("AnimationLibrary_g14j6")
+autoplay = &"cancel"

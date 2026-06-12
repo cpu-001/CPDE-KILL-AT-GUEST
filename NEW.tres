@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://4rpja6k3lvcd"]
+
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="1_8w3q3"]
+
+[resource]
+font = ExtResource("1_8w3q3")

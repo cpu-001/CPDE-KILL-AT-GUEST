@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://bs0yvn3jajpeb"]
+
+[ext_resource type="Script" uid="uid://u528fivlmy4j" path="res://pich.gd" id="1_3jfnj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3jfnj"]
+radius = 8.396268
+
+[sub_resource type="Animation" id="Animation_3jfnj"]
+resource_name = "IDLE"
+length = 0.795
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.6824237]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5.29)]
+}
+
+[sub_resource type="Animation" id="Animation_5b6lp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_25uef"]
+_data = {
+&"IDLE": SubResource("Animation_3jfnj"),
+&"RESET": SubResource("Animation_5b6lp")
+}
+
+[node name="pich" type="Area2D" unique_id=909514395 groups=["pich"]]
+position = Vector2(-0.07, 15.995)
+rotation = -0.31241393
+scale = Vector2(3.575, 3.575)
+script = ExtResource("1_3jfnj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=452826233]
+position = Vector2(1.7459389, -4.4317417)
+rotation = -0.75091696
+shape = SubResource("CircleShape2D_3jfnj")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=176003654]
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D" unique_id=1405232030]
+offset_left = -2.9001071
+offset_top = -5.987803
+offset_right = 1.4052498
+offset_bottom = 44.352207
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D" unique_id=1755076517]
+offset_left = 0.6396369
+offset_top = -7.782518
+offset_right = 7.836775
+offset_bottom = -0.37506056
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Node2D" unique_id=1344039947]
+offset_left = -9.521891
+offset_top = -7.769388
+offset_right = -2.401857
+offset_bottom = -0.36193085
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D" unique_id=869964105]
+offset_left = -0.76248574
+offset_top = -6.740135
+offset_right = 3.5428712
+offset_bottom = 43.599876
+color = Color(0.585062, 0.585062, 0.5850621, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D" unique_id=1440166738]
+offset_left = 2.7772589
+offset_top = -8.534851
+offset_right = 9.974398
+offset_bottom = -1.1273932
+color = Color(0.585062, 0.585062, 0.5850621, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D" unique_id=1301454201]
+offset_left = -7.3842688
+offset_top = -8.52172
+offset_right = -0.26423502
+offset_bottom = -1.1142626
+color = Color(0.585062, 0.585062, 0.5850621, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1680206747]
+libraries/ = SubResource("AnimationLibrary_25uef")
+autoplay = &"IDLE"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

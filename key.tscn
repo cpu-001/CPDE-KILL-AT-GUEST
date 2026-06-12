@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://ccb84pluiec76"]
+
+[ext_resource type="Script" uid="uid://ceuy3atn2ok14" path="res://key.gd" id="1_up4cr"]
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="2_p0yg6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ltq3"]
+size = Vector2(80, 198)
+
+[sub_resource type="LabelSettings" id="LabelSettings_krfvd"]
+font = ExtResource("2_p0yg6")
+font_size = 27
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Key" type="Area2D" unique_id=1385097676]
+script = ExtResource("1_up4cr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1552967748]
+offset_right = 67.0
+offset_bottom = 9.0
+color = Color(1, 0.81960785, 0.21568628, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=538128724]
+offset_left = 51.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 9.0
+color = Color(1, 0.81960785, 0.21568628, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1855833744]
+offset_left = -13.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 13.0
+color = Color(1, 0.81960785, 0.21568628, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1705195121]
+offset_left = -11.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = 11.0
+color = Color(0.68054336, 0.54455996, 7.70092e-07, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228774047]
+position = Vector2(27, 93)
+shape = SubResource("RectangleShape2D_7ltq3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=446558141]
+
+[node name="press" type="Label" parent="CanvasLayer" unique_id=1159707021]
+visible = false
+offset_left = 425.0
+offset_top = 568.0
+offset_right = 766.0
+offset_bottom = 593.0
+text = "PRESS \"G\" TO INTERACT"
+label_settings = SubResource("LabelSettings_krfvd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

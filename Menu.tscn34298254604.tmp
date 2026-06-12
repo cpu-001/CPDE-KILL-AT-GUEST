@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://rdjw0dvw8422"]
+
+[ext_resource type="Script" uid="uid://dy5id2ja7hgmu" path="res://MENU.gd" id="1_uubjt"]
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="2_ylpcl"]
+[ext_resource type="FontFile" uid="uid://gbibtoxq4a0n" path="res://HomeVideo-Bold.ttf" id="3_cx167"]
+[ext_resource type="Script" uid="uid://b4rw1s4ew4lj0" path="res://move_.gd" id="3_n4eug"]
+[ext_resource type="PackedScene" uid="uid://dyqc5ug6pebp1" path="res://moddify.tscn" id="4_cx167"]
+[ext_resource type="PackedScene" uid="uid://cuh3yiw3infus" path="res://level_menu.tscn" id="5_dolsu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cx167"]
+font = ExtResource("2_ylpcl")
+font_size = 112
+outline_size = 44
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=375619413]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uubjt")
+
+[node name="MENUD" parent="." unique_id=1490384682 instance=ExtResource("4_cx167")]
+visible = false
+layout_mode = 1
+offset_left = 533.0
+offset_top = 127.0
+offset_right = -11.0
+offset_bottom = -90.0
+script = ExtResource("3_n4eug")
+
+[node name="LevelMenu" parent="." unique_id=692351263 instance=ExtResource("5_dolsu")]
+visible = false
+layout_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=821457312]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 440.0
+offset_right = 166.0
+offset_bottom = 492.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_ylpcl")
+text = "Jugar"
+autowrap_trim_flags = 0
+script = ExtResource("3_n4eug")
+
+[node name="Button2" type="Button" parent="." unique_id=1925369216]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 517.0
+offset_right = 144.0
+offset_bottom = 567.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_ylpcl")
+text = "Salir"
+
+[node name="Button4" type="Button" parent="." unique_id=156507013]
+layout_mode = 0
+offset_left = 1007.0
+offset_top = 560.0
+offset_right = 1133.0
+offset_bottom = 591.0
+size_flags_horizontal = 0
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("3_cx167")
+toggle_mode = true
+text = "Multiplayer ON"
+flat = true
+
+[node name="Button3" type="Button" parent="." unique_id=266285739]
+layout_mode = 0
+offset_left = 998.0
+offset_top = 596.0
+offset_right = 1150.0
+offset_bottom = 627.0
+size_flags_horizontal = 0
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("3_cx167")
+toggle_mode = true
+text = "multiplayer OFF"
+flat = true
+
+[node name="Preview" type="Node2D" parent="." unique_id=1071262975]
+
+[node name="Button5" type="Button" parent="Preview" unique_id=746637151]
+offset_left = 814.0
+offset_top = 195.0
+offset_right = 1111.0
+offset_bottom = 483.0
+disabled = true
+
+[node name="Button6" type="Button" parent="Preview" unique_id=139669827]
+offset_left = 814.0
+offset_top = 195.0
+offset_right = 1111.0
+offset_bottom = 483.0
+disabled = true
+
+[node name="Button7" type="Button" parent="Preview" unique_id=366659688]
+offset_left = 814.0
+offset_top = 195.0
+offset_right = 1111.0
+offset_bottom = 483.0
+disabled = true
+
+[node name="Button8" type="Button" parent="Preview" unique_id=1010945225]
+offset_left = 798.0
+offset_top = 136.0
+offset_right = 1125.0
+offset_bottom = 190.0
+disabled = true
+
+[node name="Button9" type="Button" parent="Preview" unique_id=911496531]
+offset_left = 797.0
+offset_top = 488.0
+offset_right = 1124.0
+offset_bottom = 542.0
+disabled = true
+
+[node name="PlayerPreview" type="Node2D" parent="." unique_id=519512767]
+position = Vector2(966, 351)
+
+[node name="Label" type="LineEdit" parent="PlayerPreview" unique_id=407787723]
+offset_left = -160.00006
+offset_top = -210.00002
+offset_right = 574.8838
+offset_bottom = -109.000015
+scale = Vector2(0.43, 0.43)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 36
+theme_override_fonts/font = ExtResource("2_ylpcl")
+theme_override_font_sizes/font_size = 64
+placeholder_text = "player"
+alignment = 1
+emoji_menu_enabled = false
+flat = true
+
+[node name="moddify" type="Button" parent="PlayerPreview" unique_id=210507568]
+offset_left = -159.0
+offset_top = 144.0
+offset_right = 149.0
+offset_bottom = 184.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_ylpcl")
+text = "Moddify"
+
+[node name="Label" type="Label" parent="." unique_id=1587463360]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 218.0
+offset_right = 364.0
+offset_bottom = 425.0
+text = "META
+DATA"
+label_settings = SubResource("LabelSettings_cx167")
+
+[connection signal="pressed" from="Button" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_multiplayer_on_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_multiplayer_off_pressed"]
+[connection signal="pressed" from="PlayerPreview/moddify" to="." method="_on_moddify_pressed"]

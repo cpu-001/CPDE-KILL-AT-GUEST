@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://dfo1hqgkmtp82"]
+
+[ext_resource type="Script" uid="uid://c4pcrxg73jlri" path="res://options_menu.gd" id="1_lbr8e"]
+[ext_resource type="FontFile" uid="uid://hyanto3mhim0" path="res://HomeVideo-Regular.ttf" id="2_t1lix"]
+[ext_resource type="LabelSettings" uid="uid://4rpja6k3lvcd" path="res://NEW.tres" id="3_4gmlt"]
+[ext_resource type="Texture2D" uid="uid://bqyx3rgpclf3e" path="res://Captura de pantalla 2026-06-10 010028.png" id="4_ogda5"]
+
+[node name="OptionsMenu" type="Control" unique_id=1187895529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbr8e")
+
+[node name="ControlMenu" type="Control" parent="." unique_id=281235969]
+visible = false
+anchors_preset = 0
+offset_left = 12.0
+offset_top = -98.0
+offset_right = 52.0
+offset_bottom = -58.0
+
+[node name="Button" type="Button" parent="ControlMenu" unique_id=1029173260]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 202.0
+offset_right = 498.0
+offset_bottom = 646.0
+disabled = true
+
+[node name="Button3" type="Button" parent="ControlMenu" unique_id=1940095373]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 433.0
+offset_right = 172.0
+offset_bottom = 568.0
+disabled = true
+
+[node name="Button6" type="Button" parent="ControlMenu" unique_id=934425524]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 463.0
+offset_right = 163.0
+offset_bottom = 548.0
+disabled = true
+
+[node name="Button5" type="Button" parent="ControlMenu" unique_id=1382778233]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 335.0
+offset_right = 370.0
+offset_bottom = 428.0
+disabled = true
+
+[node name="Button4" type="Button" parent="ControlMenu" unique_id=1044236902]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 239.0
+offset_right = 479.0
+offset_bottom = 312.0
+disabled = true
+
+[node name="Button2" type="Button" parent="ControlMenu" unique_id=1207220189]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 202.0
+offset_right = 498.0
+offset_bottom = 646.0
+disabled = true
+
+[node name="MasterSlider" type="HSlider" parent="ControlMenu" unique_id=1631940593]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 265.0
+offset_right = 472.0
+offset_bottom = 309.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="FullscreenButton" type="Button" parent="ControlMenu" unique_id=1083623441]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 373.0
+offset_right = 175.0
+offset_bottom = 421.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_t1lix")
+text = "OFF"
+
+[node name="WindowscreenButton" type="Button" parent="ControlMenu" unique_id=1441542640]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 372.0
+offset_right = 354.0
+offset_bottom = 420.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_t1lix")
+text = "ON"
+
+[node name="BackButton" type="Button" parent="ControlMenu" unique_id=314163037]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 579.0
+offset_right = 157.0
+offset_bottom = 638.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_t1lix")
+text = "Back"
+
+[node name="Label" type="Label" parent="ControlMenu" unique_id=1375986463]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 252.0
+offset_right = 158.0
+offset_bottom = 267.0
+text = "Master volume"
+label_settings = ExtResource("3_4gmlt")
+
+[node name="Label3" type="Label" parent="ControlMenu" unique_id=299397251]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 440.0
+offset_right = 160.0
+offset_bottom = 455.0
+text = "Keys"
+label_settings = ExtResource("3_4gmlt")
+
+[node name="Label4" type="Label" parent="ControlMenu" unique_id=1373543]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 476.0
+offset_right = 111.0
+offset_bottom = 491.0
+text = "FIRE: F"
+label_settings = ExtResource("3_4gmlt")
+
+[node name="Label5" type="Label" parent="ControlMenu" unique_id=1555106798]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 499.0
+offset_right = 150.0
+offset_bottom = 514.0
+text = "jUMP: Space"
+label_settings = ExtResource("3_4gmlt")
+
+[node name="Label6" type="Label" parent="ControlMenu" unique_id=776298587]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 522.0
+offset_right = 130.0
+offset_bottom = 537.0
+text = "RELOAD: R"
+label_settings = ExtResource("3_4gmlt")
+
+[node name="Label2" type="Label" parent="ControlMenu" unique_id=1653292481]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 348.0
+offset_right = 159.0
+offset_bottom = 363.0
+text = "Full screen"
+label_settings = ExtResource("3_4gmlt")
+
+[node name="OPT" type="Button" parent="." unique_id=437605240]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 14.0
+offset_right = 63.0
+offset_bottom = 59.0
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("2_t1lix")
+icon = ExtResource("4_ogda5")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="ControlMenu/WindowscreenButton" to="." method="_on_windowscreen_button_pressed"]
+[connection signal="pressed" from="ControlMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="OPT" to="." method="_on_opt_pressed"]

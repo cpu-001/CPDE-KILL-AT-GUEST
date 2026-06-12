@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bsi66agvwsauk"]
+
+[ext_resource type="Script" uid="uid://b4rw1s4ew4lj0" path="res://move_.gd" id="1_cc45t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eat1j"]
+size = Vector2(1212.0608, 301)
+
+[node name="move" type="Control" unique_id=1418665471]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cc45t")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=88747343]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1707567963]
+position = Vector2(579.75, 724.5)
+shape = SubResource("RectangleShape2D_eat1j")
+debug_color = Color(0.11757349, 0.13229933, 0.13496512, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=764228326]
+wait_time = 7.493
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1571202642]
+position = Vector2(1293, 567)
+
+[connection signal="timeout" from="Timer" to="." method="_on_spawn_timer_timeout"]
